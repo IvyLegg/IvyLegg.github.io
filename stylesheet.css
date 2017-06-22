@@ -1,0 +1,343 @@
+@charset="UTF-8"
+
+h2,h3,h4,h5,h6 {
+  color: black;
+  padding: 0px;
+}
+
+h1 {
+  color: Black ;
+  font-family: "Courier New", Courier, Times;
+  font-size: 60;
+  font-weight: 400
+}
+
+li {
+  font-size: 20pt;
+  list-style-type:none;
+}
+
+
+body {
+  color: black;
+  position: relative;
+  text-align: center;
+}
+
+#container {
+  position: relative;
+  width: outerWidth;
+  height:outerHeight;
+  margin-left: 10%;
+}
+
+#header {
+  position: relative;
+  left: 30%;
+  top: 0px;
+  width: 0px;
+  height: 0px;
+  background: #B288FF; display: block; 
+}
+
+#nav {
+  position: absolute;
+  margin-top: 0px;
+  left: 0px;
+  top: 110px;
+  width: 400px;
+  height: 600px;
+  
+}
+  
+#content {
+  position: absolute;
+  left: 150px;
+  top: 130px;
+  width: 800px;
+  height: 600px;
+  margin-left: 10%;
+}
+
+
+/*buttons*/
+ {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #f8f6f6;
+}
+
+.column-left{ float: left; width: 33%; }
+
+.container {
+}
+
+.container:before, .container:after {
+  content: '';
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+.column {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 25%;
+  padding: 30px 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.column .button + .button {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  height: 33px;
+  width: 85px;
+  line-height: 33px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  border: 2px solid;
+  border-radius: 7px;
+  outline: 0;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.button.alt {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button.alt:before {
+  display: none;
+}
+.button.cyan {
+  background: #2eabb3;
+  border-color: #20797e #1f757a #195d62;
+  background-image: -webkit-linear-gradient(top, #3dbdcd 0%, #33b2c7 50%, #2eabb3 50%, #1e9a99 100%);
+}
+
+.button.cyan:before {
+  background: #3fccd5;
+  background-image: -webkit-linear-gradient(top, #249299, #4dd3dc);
+}
+
+.button.cyan:active {
+  background: #33b9c7;
+  background-image: -webkit-linear-gradient(top, #1d918f 0%, #31b2bf 60%, #33b9c7 100%);
+}
+
+.button.cyan:active:after {
+  border-color: #33b9c7;
+}
+/*Buttons end*/
+
+/*Clouds*/
+
+canvas {	display: block;
+  position: absolute;
+width:1200px;
+Height: innerHeight;
+}
+body {
+	overflow: hidden;
+    background: #B288FF;
+}
+
+#clouds{
+	padding: 20px 0;
+    width:100%;
+  height:100%;
+   position: absolute;
+}
+
+.cloud {
+  z-index:100;
+	width: 200px; height: 60px;
+	background: #ffc;
+	border-radius: 200px;	-moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #ffc;
+	width: 100px; height: 80px;
+	position: absolute; top: -10px; left: 20px;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+}
+
+.cloud:after {
+	width:120px; height: 120px;
+	top: -45px; left: auto; right: 15px;
+}
+
+
+.x1, .x2, .x3, .x4 {
+float:right;
+  right: -350px; top: -25px;
+  opacity: 0.2;
+  	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+  }
+
+.x1 {  	-webkit-animation: moveclouds 57s linear infinite;
+  
+	-moz-animation: moveclouds 57s linear infinite;
+	-o-animation: moveclouds 57s linear infinite;
+  animation-delay: 5s /* W3C and Opera */
+-moz-animation-delay: 5s /* Firefox */
+-webkit-animation-delay: 5s /* Safari and Chrome */
+}
+.x2 {  	-webkit-animation: moveclouds 52s linear infinite;
+	-moz-animation: moveclouds 52s linear infinite;
+	-o-animation: moveclouds 52s linear infinite;
+  animation-delay: 4s /* W3C and Opera */
+-moz-animation-delay: 4s /* Firefox */
+-webkit-animation-delay: 4s /* Safari and Chrome */
+}
+.x3 {  	-webkit-animation: moveclouds 48s linear infinite;
+	-moz-animation: moveclouds 48s linear infinite;
+	-o-animation: moveclouds 48s linear infinite;
+  animation-delay: 3s /* W3C and Opera */
+-moz-animation-delay: 3s /* Firefox */
+-webkit-animation-delay: 3s /* Safari and Chrome */
+}
+.x4 {  	-webkit-animation: moveclouds 50s linear infinite;
+	-moz-animation: moveclouds 50s linear infinite;
+	-o-animation: moveclouds 50s linear infinite;
+  animation-delay: 5s /* W3C and Opera */
+-moz-animation-delay: 5s /* Firefox */
+-webkit-animation-delay: 5s /* Safari and Chrome */
+}
+
+
+
+
+.x5, .x6, .x7, .h8 {
+  float:right;
+	right: -380px; top: -185px;
+	opacity: 0.2; 
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+
+}
+.x5 {  	-webkit-animation: moveclouds1 43s linear infinite;
+	-moz-animation: moveclouds 43s linear infinite;
+	-o-animation: moveclouds 43s linear infinite;
+
+}
+.x6 {  	-webkit-animation: moveclouds1 40s linear infinite;
+	-moz-animation: moveclouds 40s linear infinite;
+	-o-animation: moveclouds 40s linear infinite;
+ 
+}
+.x7 {  	-webkit-animation: moveclouds1 37s linear infinite;
+	-moz-animation: moveclouds 37s linear infinite;
+	-o-animation: moveclouds 37s linear infinite;
+ 
+}
+.x8 {  	-webkit-animation: moveclouds1 41s linear infinite;
+	-moz-animation: moveclouds 41s linear infinite;
+	-o-animation: moveclouds 41s linear infinite;
+}
+
+
+
+.x9, .x10, .x11, .h12 {
+  float:right;
+  -webkit-transform: scale(1.6);
+	-moz-transform: scale(1.6);
+	transform: scale(1.6);
+	right: -350px; top: -75px;
+
+	opacity: 0.48;
+
+}
+.x9 {  	-webkit-animation: moveclouds1 34s linear infinite;
+	-moz-animation: moveclouds 34s linear infinite;
+	-o-animation: moveclouds 34s linear infinite;
+}
+.x10 {  	-webkit-animation: moveclouds 35s linear infinite;
+	-moz-animation: moveclouds 35s linear infinite;
+	-o-animation: moveclouds 35s linear infinite;
+}
+.x11 {  	-webkit-animation: moveclouds 30s linear infinite;
+	-moz-animation: moveclouds 30s linear infinite;
+	-o-animation: moveclouds 30s linear infinite;
+}
+.x12 {  	-webkit-animation: moveclouds 30s linear infinite;
+	-moz-animation: moveclouds 30s linear infinite;
+	-o-animation: moveclouds 30s linear infinite;
+}
+
+
+@-webkit-keyframes moveclouds {
+  0% {left: -20%;}
+  30% {left: 40%; bottom:5%;}
+  55% {left: 60%;}
+	100% {left:110%; top:5%;}
+}
+@-moz-keyframes moveclouds {
+ 0% {left: -20%;}
+  30% {left: 40%; bottom:5%;}
+  55% {left: 60%;}
+	100% {left:110%; top:5%;}
+}
+@-o-keyframes moveclouds {
+ 0% {left: -20%;}
+  30% {left: 40%; bottom:5%;}
+  55% {left: 60%;}
+	100% {left:110%; top:5%;}
+}
+
+
+@-webkit-keyframes moveclouds1 {
+  0% {left: -20%;}
+  30% {left: 20%; top:1%;}
+  55% {left: 45%;}
+	100% {left:110%; top:5%;}
+}
+@-moz-keyframes moveclouds1 {
+  0% {left: -20%;}
+  30% {left: 20%; top:1%;}
+  55% {left: 45%;}
+	100% {left:110%; top:5%;}
+}
+@-o-keyframes moveclouds1 {
+  0% {left: -20%;}
+  30% {left: 20%; top:1%;}
+  55% {left: 45%;}
+	100% {left:110%; top:5%;}
+  
+ /*clouds end*/
